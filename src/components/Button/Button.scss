@@ -1,0 +1,200 @@
+$button-dimension: 2.2rem;
+$border-radius-base: 4px !default;
+$font-weight-bold: 600 !default;
+$default-margin: 1rem;
+$font-size-base: 14px !default;
+$font-size-medium: 15px !default;
+$color-primary-border: #001e40;
+$font-size-large: 18px !default;
+$color-highlight-active: #ff7b00;
+$color-primary: #1f0044;
+$color-secondary: #a695ba;
+
+.button {
+  border-radius: $border-radius-base;
+  padding: 1rem;
+  min-width: $button-dimension;
+  min-height: $button-dimension;
+  transition: 250ms background-color;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  +.button {
+    margin-left: 1em;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+
+    .btn-icon {
+      margin-right: 0;
+      margin-left: $default-margin;
+    }
+
+    &::after {
+      margin-left: 0;
+      margin-right: $default-margin;
+    }
+  }
+
+  i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+
+  &.icon-right {
+
+    i {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  &--plain {
+    background: transparent;
+    border: 0;
+    color: $color-highlight;
+    font-size: $font-size-base;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    font-weight: $font-weight-bold;
+
+    i {
+      font-size: $font-size-medium;
+      margin: 0;
+    }
+
+    >*+* {
+      margin-left: 0.5rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-highlight-hover;
+    }
+
+    &.button--bold {
+      font-weight: $font-weight-bold;
+    }
+
+    &.button--icon-highlight {
+
+      i {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &--small {
+    padding: 0.6rem 0.8rem;
+    min-height: 0;
+  }
+
+  &--std {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 4rem;
+  }
+
+  &--large {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 4.8rem;
+
+    i {
+      font-size: 1.8rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &--xlarge {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    padding: 2rem;
+    width: 100%;
+
+    i {
+      font-size: $font-size-large;
+    }
+  }
+
+  &--icon {
+    padding: 0.5rem;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    i {
+      vertical-align: text-bottom;
+      color: white;
+      font-size: 2.4rem;
+      margin: 0;
+      height: max-content;
+    }
+
+    &.primary,
+    &.highlight,
+    &.transparent,
+    &.primary:hover,
+    &.highlight:hover,
+    &.transparent:hover {
+
+      i {
+        color: $color-highlight-active;
+      }
+    }
+
+
+    &.button--large {
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+    }
+  }
+
+  &.iconButton-primary {
+    i {
+      color: $color-primary;
+    }
+  }
+
+  &--disc {
+    background: $color-primary;
+    border-radius: 50%;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    min-width: 26px;
+    padding: 0;
+
+    i {
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}
+
+
+a.button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.disabledSaveBtn {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
