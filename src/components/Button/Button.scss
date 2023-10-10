@@ -9,6 +9,8 @@ $font-size-large: 18px !default;
 $color-highlight-active: #ff7b00;
 $color-primary: #1f0044;
 $color-secondary: #a695ba;
+$color-highlight: #4d2e73;
+$color-highlight-hover: #6d5787;
 
 .button {
   border-radius: $border-radius-base;
@@ -168,7 +170,7 @@ $color-secondary: #a695ba;
   &--disc {
     background: $color-primary;
     border-radius: 50%;
-    color: $color-white;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,6 @@
 {
-  "name": "@Darshan-Kevadiya/npm-package-for-hoc",
-  "version": "0.0.1",
+  "name": "@darshan-kevadiya/npm-package-for-hoc",
+  "version": "0.0.3",
   "description": "A template to use resusable component",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -12,9 +12,14 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "^18.2.25",
+    "css-loader": "^6.8.1",
     "react": "^18.2.0",
     "rollup": "^4.0.2",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.69.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
